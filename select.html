@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Redirecting...</title>
+    <script type="text/javascript">
+        window.onload = function() {
+            var urls = [
+                'https://trust-dictator-faa00779e496.herokuapp.com/demo?PROLIFIC_PID={{%PROLIFIC_PID%}}',
+                'https://dictator-trust-2a164be3abb7.herokuapp.com/demo?PROLIFIC_PID={{%PROLIFIC_PID%}}'
+            ];
+            var randomUrl = urls[Math.floor(Math.random() * urls.length)];
+            window.location.href = randomUrl;
+        }
+    </script>
+</head>
+<body>
+    <p>Please wait, you are being redirected...</p>
+</body>
+</html>
