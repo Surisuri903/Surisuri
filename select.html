@@ -4,9 +4,14 @@
     <title>Redirecting...</title>
     <script type="text/javascript">
         window.onload = function() {
+            var params = new URLSearchParams(window.location.search);
+            var prolific_pid = params.get('PROLIFIC_PID');
+            var study_id = params.get('STUDY_ID');
+            var session_id = params.get('SESSION_ID');
+
             var urls = [
-                'https://trust-dictator-16624232a4eb.herokuapp.com/demo?PROLIFIC_PID={{%PROLIFIC_PID%}}',
-                'https://dictator-trust-ac93db5b881a.herokuapp.com/demo?PROLIFIC_PID={{%PROLIFIC_PID%}}'
+                'https://dictator-trust-ac93db5b881a.herokuapp.com/demo?PROLIFIC_PID=' + prolific_pid + '&STUDY_ID=' + study_id + '&SESSION_ID=' + session_id,
+                'https://trust-dictator-16624232a4eb.herokuapp.com/demo?PROLIFIC_PID=' + prolific_pid + '&STUDY_ID=' + study_id + '&SESSION_ID=' + session_id
             ];
             var randomUrl = urls[Math.floor(Math.random() * urls.length)];
             window.location.href = randomUrl;
