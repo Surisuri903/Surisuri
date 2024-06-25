@@ -10,8 +10,8 @@
             var session_id = params.get('SESSION_ID');
 
             var urls = [
-                'https://di-t-4bdbc8793c40.herokuapp.com/room/trial?participant_label={{%PROLIFIC_PID%}} to session wide link,
-                'https://t-d-e99d1c773f18.herokuapp.com/room/trial?participant_label={{%PROLIFIC_PID%}} to session wide link
+                'https://t-d-e99d1c773f18.herokuapp.com/room/trial?PROLIFIC_PID={{%PROLIFIC_PID%}}&STUDY_ID={{%STUDY_ID%}}&SESSION_ID={{%SESSION_ID%}}
+                'https://di-t-4bdbc8793c40.herokuapp.com/room/trial?PROLIFIC_PID={{%PROLIFIC_PID%}}&STUDY_ID={{%STUDY_ID%}}&SESSION_ID={{%SESSION_ID%}}
             ];
             var randomUrl = urls[Math.floor(Math.random() * urls.length)];
             window.location.href = randomUrl;
