@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Redirecting...</title>
+    <script type="text/javascript">
+        window.onload = function() {
+            var params = new URLSearchParams(window.location.search);
+            var prolific_pid = params.get('PROLIFIC_PID');
+            var study_id = params.get('STUDY_ID');
+            var session_id = params.get('SESSION_ID');
+
+            var urls = [
+                'https://di-t-4bdbc8793c40.herokuapp.com/room/trial?participant_label={{%PROLIFIC_PID%}} to session wide link,
+                'https://t-d-e99d1c773f18.herokuapp.com/room/trial?participant_label={{%PROLIFIC_PID%}} to session wide link
+            ];
+            var randomUrl = urls[Math.floor(Math.random() * urls.length)];
+            window.location.href = randomUrl;
+        }
+    </script>
+</head>
+<body>
+    <p>Please wait, you are being redirected...</p>
+</body>
+</html>
